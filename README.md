@@ -11,5 +11,8 @@ This document outlines my progress and exercises based on James Aspnes' notes fr
 
 Below are the exercises I've worked on, along with the relevant files
 
-## Exercise 1
-- File involved: hello.c
+## Exercise 1: Hello World Program
+
+**Instructions**: Write a program that prints the string `"Hello, world!` followed by a newline character to stdout without using the characters `'l'`, `'L'`, `'1'`, `'|'`, `'o'`, `'O'`, or `'0'` in source files, except in lines starting with `#include`. The program should also return the standard success code `0` from `main`.
+
+- **File**: hello.c
