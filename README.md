@@ -7,6 +7,9 @@ This document outlines my progress and exercises based on James Aspnes' notes fr
 - **Current Bookmark**: Section 4.2.1.3
 - **Current Exercise**: Exercise 2
 
-## Exercise 1
+## Exercises
 
+Below are the exercises I've worked on, along with the relevant files
+
+## Exercise 1
 - File involved: hello.c
