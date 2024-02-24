@@ -7,7 +7,7 @@ This document outlines my progress and exercises based on James Aspnes' [notes](
 - **Current Bookmark**: Section 4.5
 - **Current Exercise**: Exercise 2
 
-## Exercises
+## [Exercises](http://cs.yale.edu/homes/aspnes/classes/223/notes.html#assignments)
 
 Below are the exercises I've worked on, along with the relevant files
 
