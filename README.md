@@ -4,7 +4,7 @@ This document outlines my progress and exercises based on James Aspnes' [notes](
 
 ## Progress
 
-- **Current Bookmark**: Section 4.2.2.3
+- **Current Bookmark**: Section 4.5
 - **Current Exercise**: Exercise 2
 
 ## Exercises
