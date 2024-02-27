@@ -4,7 +4,7 @@ This document outlines my progress and exercises based on James Aspnes' [notes](
 
 ## Progress
 
-- **Current Bookmark**: Section 4.9
+- **Current Bookmark**: Section 4.10
 - **Current Exercise**: Exercise 4
 
 ## [Exercises](http://cs.yale.edu/homes/aspnes/classes/223/notes.html#assignments)
@@ -28,3 +28,9 @@ Below are the exercises I've worked on, along with the relevant files
 **Instructions**: Implement the funcions `decimalAdd`, `decimalSubtract`, and `decimalPrint` as specified in the `decimal.h` header file. The `decimalAdd` function should add two BCD (binary-coded decimal) numbers and store the result in a third array, handling carry where necessary. The `decimalSubtract` function should subtract the second BCD number from the first, handling borrow. The `decimalPrint` function should print a BCD number to `stdout`, starting with the most significant digit. Ensure proper error handling for cases such as overflow in addition or underflow in subtraction.
 
 - **File**: [exercises/3/decimal.c](https://github.com/smomara/yale_cpsc_223/blob/main/exercises/3/decimal.c)
+
+### Exercise 4: Split and Join String Operations
+
+**Instructions**: Implement the functions `split`, `join`, and `freeSplit` as described in the `split.h` header file. Your implementation should handle cases of consecutive separator characters, and manage memory allocation and deallocation appropriately to avoid memory leaks.
+
+- **File**: [exercises/4/split.c](https://github.com/smomara/yale_cpsc_223/blob/main/exercises/4/split.c)
