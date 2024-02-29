@@ -4,7 +4,7 @@ This document outlines my progress and exercises based on James Aspnes' [notes](
 
 ## Progress
 
-- **Current Bookmark**: Section 5
+- **Current Bookmark**: Section 5.3
 - **Current Exercise**: Exercise 5
 
 ## [Exercises](http://cs.yale.edu/homes/aspnes/classes/223/notes.html#assignments)
