@@ -16,8 +16,8 @@
 // of this struct directly; use hPack and hUnpack.
 struct h {
     double a; // real component
-    double b;
-    double u2;
+    double b; // u component
+    double u2; // value of u*u
 };
 
 // Construct a hypercomplex number a+b*u from the given coordinates.
