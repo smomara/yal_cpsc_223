@@ -15,7 +15,7 @@
 // User is politely requested not to access fields
 // of this struct directly; use hPack and hUnpack.
 struct h {
-    double a;
+    double a; // real component
     double b;
     double u2;
 };
