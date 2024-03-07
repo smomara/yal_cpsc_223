@@ -5,7 +5,7 @@ This document outlines my progress and exercises based on James Aspnes' [notes](
 ## Progress
 
 - **Current Bookmark**: Section 5.5 Abstract Data Types
-- **Current Exercise**: Exercise 5
+- **Current Exercise**: Exercise 6
 
 ## [Exercises](http://cs.yale.edu/homes/aspnes/classes/223/notes.html#assignments)
 
@@ -27,10 +27,22 @@ Below are the exercises I've worked on, along with the relevant files
 
 **Instructions**: Implement the funcions `decimalAdd`, `decimalSubtract`, and `decimalPrint` as specified in the `decimal.h` header file. The `decimalAdd` function should add two BCD (binary-coded decimal) numbers and store the result in a third array, handling carry where necessary. The `decimalSubtract` function should subtract the second BCD number from the first, handling borrow. The `decimalPrint` function should print a BCD number to `stdout`, starting with the most significant digit. Ensure proper error handling for cases such as overflow in addition or underflow in subtraction.
 
-- **File**: [exercises/3/decimal.c](https://github.com/smomara/yale_cpsc_223/blob/main/exercises/3/decimal.c)
+- **Files**:
+    - [exercises/3/decimal.h](https://github.com/smomara/yale_cpsc_223/blob/main/exercises/3/decimal.h)
+    - [exercises/3/decimal.c](https://github.com/smomara/yale_cpsc_223/blob/main/exercises/3/decimal.c)
 
 ### Exercise 4: Split and Join String Operations
 
 **Instructions**: Implement the functions `split`, `join`, and `freeSplit` as described in the `split.h` header file. Your implementation should handle cases of consecutive separator characters, and manage memory allocation and deallocation appropriately to avoid memory leaks.
 
-- **File**: [exercises/4/split.c](https://github.com/smomara/yale_cpsc_223/blob/main/exercises/4/split.c)
+- **Files**:
+    - [exercises/4/split.h](https://github.com/smomara/yale_cpsc_223/blob/main/exercises/4/split.h)
+    - [exercises/4/split.c](https://github.com/smomara/yale_cpsc_223/blob/main/exercises/4/split.c)
+
+### Exercise 5: Hypercomplex Number Arithmetic Library
+
+**Instructions**: Implement a library that performs arithmetic operations on hypercomplex numbers of the form a + bu, where u^2 = c for a given constant real value c. This library should enable operations on hypercomplex numbers such as addition, subtraction, multiplication, and division, handling different values of c to support complex numbers (c = -1), split-complex numbers (c = 1), and dual numbers (c = 0). Define a struct `h` to represent hypercomplex numbers, with fields for the real and imaginary parts as `double`s. Implement functions to perform the specified arithmetic operations, ensuring that the library can handle edge cases appropriately.
+
+- **Files**: 
+    - [exercises/5/hypercomplex.h](https://github.com/smomara/yale_cpsc_223/blob/main/exercises/5/hypercomplex.h)
+    - [exercises/5/hypercomplex.c](https://github.com/smomara/yale_cpsc_223/blob/main/exercises/5/hypercomplex.c)
