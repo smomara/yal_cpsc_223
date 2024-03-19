@@ -1,11 +1,11 @@
-#include <stdio.h>
-
 struct string {
     int length;
     char *data;
 };
 
-int main(int argc, char **argv) {
+int
+main(int argc, char **argv)
+{
     struct string s;
 
     s.length = 4;

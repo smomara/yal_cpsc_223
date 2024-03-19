@@ -6,31 +6,47 @@
 
 #include "array.h"
 
+// Invariant: size == number of elements in data
 struct array {
-    size_t size;
-    int *data;
+    size_t size; // number of elements in data;
+    int *data;   // malloc'd block
 };
 
 #define SIZE_INITIAL (16)
-#define SIZE_MULTIPLIER (2)
+#define SIZE_MULTIPLIER (2)    // Minimum ratio to grow by.
 
-struct array *arrayCreate(void) {
+// Create a new array initialized to 0.
+struct array *
+arrayCreate(void)
+{
     struct array *a = malloc(sizeof(struct array));
     assert(a);
+
     a->size = SIZE_INITIAL;
+
+    // calloc zeroes out the array
     a->data = calloc(a->size, sizeof(int));
+
     assert(a->data);
+
     return a;
 }
 
-static void arrayExpand(struct array *a, size_t position) {
-    if (position >= a->size) {
+// Expand array if needed to include position.
+static void
+arrayExpand(struct array *a, size_t position)
+{
+    if(position >= a->size) {
+        // expansion needed
         size_t bigger = a->size * SIZE_MULTIPLIER;
 
-        if (position >= bigger) {
+        if(position >= bigger) {
+            // even more expansion needed
             bigger = position + 1;
         }
 
+        // Breaks invariant, we will fix later
+        // after using a->size to zero out new space.
         a->data = realloc(a->data, sizeof(int) * bigger);
 
         memset(&a->data[a->size], 0, sizeof(int) * (bigger - a->size));
@@ -39,17 +55,31 @@ static void arrayExpand(struct array *a, size_t position) {
     }
 }
 
-int arrayGet(struct array *a, size_t position) {
-    if (position >= a->size) { return 0; }
-    return a->data[position];
+// Return the value in an array at given position.
+int
+arrayGet(struct array *a, size_t position)
+{
+    if(position >= a->size) {
+        // No need to expand, just return the default value.
+        return 0;
+    } else {
+        return a->data[position];
+    }
 }
 
-int arraySet(struct array *a, size_t position, int value) {
+// Set the value in an array at given position.
+int
+arraySet(struct array *a, size_t position, int value)
+{
     arrayExpand(a, position);
+
     return a->data[position] = value;
 }
 
-void arrayDestroy(struct array *a) {
+// Free all space used by an array.
+void 
+arrayDestroy(struct array *a)
+{
     free(a->data);
     free(a);
 }

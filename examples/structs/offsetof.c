@@ -3,7 +3,9 @@
 #include <stddef.h>
 #include <assert.h>
 
-int main(int argc, char **argv) {
+int
+main(int argc, char **argv)
+{
     struct foo {
         int i;
         char c;

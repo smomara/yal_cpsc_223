@@ -1,3 +1,8 @@
+/*
+ * Count down from COUNTDOWN_START (defined below) to 0.
+ * Prints all numbers in the range including both endpoints.
+ */
+
 #include <stdio.h>
 
 #define COUNTDOWN_START (10)

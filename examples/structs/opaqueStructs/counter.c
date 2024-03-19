@@ -7,7 +7,9 @@ struct counter {
     int value;
 };
 
-struct counter *counterCreate(void) {
+struct counter *
+counterCreate(void)
+{
     struct counter *c;
 
     c = malloc(sizeof(struct counter));
@@ -18,10 +20,14 @@ struct counter *counterCreate(void) {
     return c;
 }
 
-void counterDestroy(struct counter *c) {
+void
+counterDestroy(struct counter *c)
+{
     free(c);
 }
 
-int counterIncrement(struct counter *c) {
+int
+counterIncrement(struct counter *c)
+{
     return ++(c->value);
 }

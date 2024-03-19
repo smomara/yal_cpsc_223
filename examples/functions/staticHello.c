@@ -1,9 +1,15 @@
-static void helloHelper(void) { puts("hi!"); }
+static void
+helloHelper(void)
+{
+    puts("hi!");
+}
 
-void hello(int repetitions) {
+void
+hello(int repetitions)
+{
     int i;
 
-    for (i = 0; i < repetitions; i++) {
+    for(i = 0; i < repetitions; i++) {
         helloHelper();
     }
 }

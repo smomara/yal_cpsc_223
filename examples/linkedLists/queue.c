@@ -2,86 +2,121 @@
 #include <stdlib.h>
 #include <assert.h>
 
+/* standard linked list element */
 struct elt {
     struct elt *next;
     int value;
 };
 
 struct queue {
-    struct elt *head;
-    struct elt *tail;
+    struct elt *head;  /* dequeue this next */
+    struct elt *tail;  /* enqueue after this */
 };
 
-typedef struct queue *Queue;
+/* create a new empty queue */
+struct queue *
+queueCreate(void)
+{
+    struct queue *q;
 
-// create a new empty queue
-Queue queueCreate(void) {
-    Queue q = malloc(sizeof(struct queue));
-    assert(q);
-    q->head = q->tail = NULL;
+    q = malloc(sizeof(struct queue));
+
+    q->head = q->tail = 0;
+
     return q;
 }
 
-// add a new value to the back of the queue
-void enq(Queue q, int value) {
-    struct elt *e = malloc(sizeof(struct elt));
+/* add a new value to back of queue */
+void
+enq(struct queue *q, int value)
+{
+    struct elt *e;
+
+    e = malloc(sizeof(struct elt));
     assert(e);
 
     e->value = value;
-    e->next = NULL;
-    if (q->head == NULL) {
+
+    /* Because I will be the tail, nobody is behind me */
+    e->next = 0;
+
+    if(q->head == 0) {
+        /* If the queue was empty, I become the head */
         q->head = e;
     } else {
+        /* Otherwise I get in line after the old tail */
         q->tail->next = e;
     }
+
+    /* I become the new tail */
     q->tail = e;
 }
 
-int queueEmpty(const Queue q) {
-    return (q->head == NULL);
+int
+queueEmpty(const struct queue *q)
+{
+    return (q->head == 0);
 }
 
-// remove and return value from front of queue
-int deq(Queue q) {
+/* remove and return value from front of queue */
+int
+deq(struct queue *q)
+{
+    int ret;
+    struct elt *e;
+
     assert(!queueEmpty(q));
 
-    struct elt *e = q->head;
-    int ret = q->head->value;
+    ret = q->head->value;
 
+    /* patch out first element */
+    e = q->head;
     q->head = e->next;
+
     free(e);
 
     return ret;
 }
 
-// print contents of queue on a single line, head first
-void queuePrint(const Queue q) {
-    for(struct elt *e = q->head; e != NULL; e = e->next) {
+/* print contents of queue on a single line, head first */
+void
+queuePrint(struct queue *q)
+{
+    struct elt *e;
+
+    for(e = q->head; e != 0; e = e->next) {
         printf("%d ", e->value);
     }
+    
     putchar('\n');
 }
 
-void queueDestroy(Queue q) {
-    while (!queueEmpty(q)) {
+/* free a queue and all of its elements */
+void
+queueDestroy(struct queue *q)
+{
+    while(!queueEmpty(q)) {
         deq(q);
     }
+
     free(q);
 }
 
-int main(int argc, char **argv) {
+int
+main(int argc, char **argv)
+{
     int i;
     struct queue *q;
 
     q = queueCreate();
 
-    for (i = 0; i < 5; i++) {
+    for(i = 0; i < 5; i++) {
         printf("enq %d\n", i);
         enq(q, i);
         queuePrint(q);
     }
 
-    while (!queueEmpty(q)) {
+    while(!queueEmpty(q)) {
         printf("deq gets %d\n", deq(q));
         queuePrint(q);
     }

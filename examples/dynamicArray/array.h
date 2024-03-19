@@ -7,8 +7,6 @@
 // whenever the caller asks for a location that
 // isn't in the array already.
 
-#include <stdlib.h>
-
 // Create a new array initialized to 0.
 struct array *arrayCreate(void);
 

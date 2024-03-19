@@ -5,10 +5,12 @@ enum foo { FOO };
 enum apple { MACINTOSH, CORTLAND, RED_DELICIOUS };
 enum orange { NAVEL, CLEMENTINE, TANGERINE };
 
-int main(int argc, char **argv) {
+int
+main(int argc, char **argv)
+{
     enum foo x;
 
-    if (argc != 1) {
+    if(argc != 1) {
         fprintf(stderr, "Usage: %s\n", argv[0]);
         return 1;
     }
@@ -20,6 +22,7 @@ int main(int argc, char **argv) {
 
     printf("x = %d\n", x);
 
+    /* note we can add apples and oranges */
     printf("%d\n", RED_DELICIOUS + TANGERINE);
 
     return 0;
