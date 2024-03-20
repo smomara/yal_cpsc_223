@@ -25,7 +25,7 @@ Date | Item | Topic | Materials
 01/28/22 | Lecture 2 | Arithmetic in C | [Integer Types in C](notes.md#421-integer-types-in-c), [Floating-point types](notes.md#423-floating-point-types), K&R §§2.2, 2.3, 2.5
 01/31/22 | Lecture 3 | Statements and control flow: `if`, `while`, `for`, `do...while`. Relational and logical operators: `<`, `<=`, `==`, `!=`, `>=`, `>`, `&&`, `\|\|`, `!`, `?:`, and `,`. More assignment operators: `+=` and friends, `++` and `--` | [Statements](notes.md#47-statements-and-control-structures), K&R §§1.5, 2.6, 2.8, 2.10, 2.12, 3.1, 3.2, 3.3, 3.5, and 3.6
 02/02/22 | Lecture 4 | Character I/O using `getchar`, `putchar`, and `ungetc`. Goto-like statements: `switch`, `break`, `continue`, and `goto` | [Reading and writing single characters](notes.md#462-reading-and-writing-single-characters), K&R §§1.5, 3.7, and 3.8
-02/03/22 | Assignment 1 | Hello, World! | [Assignment 1](notes.html#81-assignment-1-due-2022-02-03-at-1700)
+02/03/22 | Assignment 1 | Hello, World! | [Assignment 1](notes.md#81-assignment-1-due-2022-02-03-at-1700)
 02/07/22 | Lecture 5 | Functions | [Functions](notes.md#48-functions), K&R §§4.1–4.5
 02/09/22 | Lecture 6 | Start of pointers and arrays: pointer types and pointer variables. The `&` and `*` operators. Using a pointer to get a value out of a function. Array declarations | [Pointers up through Arrays](notes.md#49-pointers), K&R §§5.1–5.4
 02/10/22 | Assignment 2 | Transposition | [Assignment 2](notes.html#81-assignment-2-due-2022-02-10-at-1700)
